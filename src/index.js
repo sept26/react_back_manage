@@ -1,10 +1,8 @@
+import 'babel-polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Router from '@/router'
-// ReactDOM.render(
-//   <h1>Hello, world!</h1>,
-//   document.getElementById('root')
-// )
+import '@/style/index.less'
 
 const render = Component => {
   ReactDOM.render(
