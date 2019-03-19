@@ -4,7 +4,7 @@ class routerGuard extends React.Component {
   render() {
     const {location, config} = this.props
     const {pathname} = location
-    const isLogin = localStorage.getItem('userAuth')
+    const isLogin = localStorage.getItem('userName')
     const targetRouterConfig = config.find(v => v.path === pathname)
     // 不需要登录就可以访问不需要权限的路由
     if(targetRouterConfig && !targetRouterConfig.auth && !isLogin){
