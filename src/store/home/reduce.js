@@ -1,6 +1,6 @@
 import * as Type from './../actionType'
  let defaultState = {
-   collapse: true
+   collapse: false
  }
 
  export const oneState = (state = defaultState, action) => {

@@ -65,26 +65,32 @@ class TopBar extends React.Component {
     )
     return (
       <main className="top-bar-container">
-        <div className="scale-btn" onClick={this.changeCollapse}>
-          {
-            this.props.collapse ? <Icon type="menu-fold" /> : <Icon type="menu-unfold" />
-          }
-          
+        <div className="top-bar-container-left">
+          后台管理系统
         </div>
-        <div className="top-bar-left" onClick={this.handleFullScreen}>
-        <Tooltip placement="bottom" title={this.state.fullscreen ? '' : '全屏'}>
-          {
-            this.state.fullscreen ? <Icon type="fullscreen-exit" /> : <Icon type="fullscreen" />
-          }
-        </Tooltip>
+
+        <div className="top-bar-container-right">
+          <div className="scale-btn" onClick={this.changeCollapse}>
+            {
+              this.props.collapse ? <Icon type="menu-unfold" /> : <Icon type="menu-fold" />
+            }
+            
+          </div>
+          <div className="top-bar-left" onClick={this.handleFullScreen}>
+          <Tooltip placement="bottom" title={this.state.fullscreen ? '' : '全屏'}>
+            {
+              this.state.fullscreen ? <Icon type="fullscreen-exit" /> : <Icon type="fullscreen" />
+            }
+          </Tooltip>
+          </div>
+          <div className="top-bar-right" >
+              <Dropdown overlay={menu}>
+                <div className="top-bar-right-content">
+                  <span>{this.state.userName}</span>&nbsp;<Icon type="down" />
+                </div>
+              </Dropdown>
+          </div>
         </div>
-        <div className="top-bar-right" >
-            <Dropdown overlay={menu}>
-              <div className="top-bar-right-content">
-                <span>{this.state.userName}</span>&nbsp;<Icon type="down" />
-              </div>
-            </Dropdown>
-         </div>
       </main>
     )
   }

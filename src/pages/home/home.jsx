@@ -1,10 +1,12 @@
 import React from 'react'
 import TopBar from './../topBar/topBar'
+import SideBar from './../sideBar/sideBar'
 class Home extends React.Component {
   render() {
     return (
-      <div>
+      <div className="home-container">
         <TopBar/>
+        <SideBar/>
       </div>
     )
   }
