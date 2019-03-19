@@ -1,9 +1,10 @@
 import React from 'react'
+import TopBar from './../topBar/topBar'
 class Home extends React.Component {
   render() {
     return (
       <div>
-        这是home主页
+        <TopBar/>
       </div>
     )
   }
