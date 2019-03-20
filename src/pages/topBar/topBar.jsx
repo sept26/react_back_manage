@@ -65,11 +65,14 @@ class TopBar extends React.Component {
     )
     return (
       <main className="top-bar-container">
-        <div className="top-bar-container-left">
+        <div className={this.props.collapse ? 'left-move top-bar-container-left' : 'right-move top-bar-container-left'}>
+          <span className="back-icon">
+            <Icon type="crown" />
+          </span>
           后台管理系统
         </div>
 
-        <div className="top-bar-container-right">
+        <div className={this.props.collapse ? 'add-width top-bar-container-right' : 'reduce-width top-bar-container-right'}>
           <div className="scale-btn" onClick={this.changeCollapse}>
             {
               this.props.collapse ? <Icon type="menu-unfold" /> : <Icon type="menu-fold" />
