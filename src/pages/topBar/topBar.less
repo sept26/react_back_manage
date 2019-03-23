@@ -35,23 +35,24 @@
   .top-bar-container-right{
     display: flex;
     justify-content: flex-end;
+    width: calc(100% - 80px);
     align-items: center;
     height: 70px;
     line-height: 70px;
     padding-right: 30px;
     position: relative;
-    .top-bar-left {
-      width: 30px;
-      color: #fff;
-      i {
-        font-size: 20px;
+      .top-bar-left {
+        width: 30px;
+        color: #fff;
+        i {
+          font-size: 20px;
+        }
       }
-    }
-    .top-bar-right {
-      width: 70px;
-      color: #fff;
-      margin-left: 15px;
-    }
+      .top-bar-right {
+        width: 70px;
+        color: #fff;
+        margin-left: 15px;
+      }
     .scale-btn {
       width: 70px;
       height: 70px;
@@ -62,14 +63,13 @@
       align-items: center;
       justify-content: center;
       position: absolute;
-      left: 0;
       cursor: pointer;
     }
   }
-  .add-width {
-    width: calc(100% - 80px);
+  .add-left {
+    left: 25px;
   }
-  .reduce-width {
-    width: calc(100% - 256px);
+  .reduce-left {
+    left: 0;
   }
 }
